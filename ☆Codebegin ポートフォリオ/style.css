@@ -1,0 +1,293 @@
+@charset "utf-8";
+/*
+#003333
+#99cc99
+#ffffcc
+#ccccff
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color:rgb(255, 255, 255);
+    font-family: '游明朝','Yu Mincho','Hiragino Mincho Pro',selif;
+}
+.logoimg {
+    margin: 50px 150px;
+}
+.hmenu {
+    float: right;
+    margin: 50px 200px 5px;
+}
+
+main {
+    margin: 30px 10%;
+    /*background-color: #ffffcc;*/
+    width: 80%;
+}
+header {
+    /*background-color: #99cc99;*/
+    padding-bottom: 50px;
+}
+#nav-contents {
+    position: absolute;
+    top: 120px;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    background: #000;
+    transition: 0.3;
+    opacity: 0;
+    pointer-events: none;
+}
+.nav-invisible {       /*checkbox*/
+    opacity: 0;
+    pointer-events: none;
+}
+.top-wrapper {
+    padding: 180px 0 100px 0;
+    background-image: url("img/main-----img.png");
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+    margin: 40px 0;
+}
+.top-wrapper p {
+    line-height: 2em;
+    font-weight: bold;
+    font-size: 20px;
+}
+/*.mainimg {
+    width: 90%;
+    margin-bottom: 30px;
+    height: auto;
+}*/
+a {
+    color: #778899;
+}
+a:visited {
+    color: #a8a8a8;
+}
+a:hover {
+    color: #4682b4;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover img {
+    opacity: 0.7;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+}
+h2 {
+    /*border-top: solid 2px rgb(150, 202, 154) ;*/
+    color: #003333;
+    font-size: 30px;
+    margin: 0 0 20px  ;
+}
+h3 {
+    color: #003333;
+}
+p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+img {
+    vertical-align: bottom;
+}
+.about,.services,.portfolio,.contact {
+    padding-bottom: 20px;
+}
+/*about*/
+.my-img {
+    width: 150px;
+    height: 150px;
+    margin: 70px 20px 20px;
+    background-color: #ffffcc;
+    border-radius: 1em;
+    padding: 20px;
+    float: left;
+}
+.about {
+    height: 400px;
+/*    background-color: #ffffcc;*/
+    margin-top: 50px;
+}
+.about h2 {
+    margin-top: 50px;
+}
+.about p {
+   margin-top: 70px;
+   float: right;
+   width: 75%;
+} 
+/*.skills-services*/
+.skills-services {
+    height: 600px;
+}
+.skills {
+    float: left;
+    width: 33%;
+    margin: 70px 0 100px;
+}
+.services {
+    float: left;
+    width: 50%;
+    margin-bottom: 100px;
+}
+i {
+    color: #ccccff;
+    height: 85px;
+ }
+/*portfolio*/
+/*.portfolio{
+   height: 850px;
+}*/
+.p-img {
+    width: 100%;
+    height: 400px;
+
+}
+.p-site {
+/*    float: left;*/
+    width: 70%;
+    margin: 20px 15% ;
+    /*background-color: aquamarine;*/
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.p-site h3 {
+
+    margin: 20px;
+}
+/*contact*/
+.contact {
+    height: 500px;
+/*    background-color: blueviolet;*/
+}
+.c-name-mail {
+    float: left;
+    width: 50%;
+  /*  background-color: cadetblue;*/
+}
+.detailbox {
+    float: left;
+    width: 50%;
+/*    background-color: cyan;*/
+}
+.entryform dl {
+    height: 200px;
+}
+dt,dd {
+    margin: 20px;
+}
+.lead {
+    line-height: 1.5em;
+}
+.name,.email,.detail{
+    border: solid 2px rgb(150, 202, 154);
+    border-radius: 4px;
+}
+.name,.email {
+    width: 95%;
+    height: 50px;
+}
+.detail {
+    width: 95%;
+    height: 170px;
+}
+.submit_button {
+    border: solid 2px rgb(150, 202, 154);
+    border-radius: 4px;
+    color: rgb(43, 22, 4);
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    float: right;
+    margin: 20px;
+}
+.submit_button:hover {
+    opacity: 0.7;
+}
+.must {
+    color: #ff3d3d;
+}
+.footer {
+    margin: 0;
+    height: 80px;
+    background-color: rgb(150, 202, 154);
+  
+}
+@media screen and (max-width:1000px ) {
+    .logoimg {
+        margin: 30px 50px;
+    }
+    #nav-open span,  #nav-open span:before,  #nav-open span:after {
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        background: #666;
+        content: "";
+    }
+    #nav-open span {
+        top: 38px;
+        right: 30px;
+    }
+    #nav-open span:before {
+        bottom: -12px;
+    }
+    #nav-open span:after {
+        bottom: -24px;
+    }
+    #nav-input:checked ~ #nav-contents {
+        opacity: .8;
+    }    
+    #nav-contents {
+        background: #000;
+       /* opacity: 0.8;これ入れなかったら解決した！*/
+        position: absolute;
+        top: 95px;
+        z-index: 100;
+        width: 100%;
+        height: auto;
+        transition: 0.3;
+        pointer-events: auto;
+    }
+    .sp-menu-l {
+        list-style: none;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #fff;
+        padding: 20px;
+        text-align: left;
+        line-height: 2;
+    }
+    .sp-menu-l a {
+        text-decoration: none;
+        color: white;
+    }
+    .sp-menu-top {
+        font-size: 20px;  
+    }
+    .sp-menu-bottom {
+        font-size: 13px;
+    }
+    .about p {
+        float: left;
+    }
+    .top-wrapper {
+        background-image:none;
+    }
+    .p-img {
+        height: 250px;
+    }
+    .p-site {
+        width: 90%;
+        margin: 20px 5% ;
+}
+@media (max-width: 670px ) {
+
+}
